@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "mttm:blocks/fusion_furnace_side",
+        "up": "mttm:blocks/fusion_furnace_top",
+        "down": "mttm:blocks/fusion_furnace_bottom",
+        "north": "mttm:blocks/fusion_furnace_front_off",
+        "east": "mttm:blocks/fusion_furnace_side",
+        "south": "mttm:blocks/fusion_furnace_side",
+        "west": "mttm:blocks/fusion_furnace_side"
+    }
+}

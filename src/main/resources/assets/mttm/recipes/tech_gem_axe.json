@@ -1,0 +1,39 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " CR",
+        " PR",
+        " S "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mttm:tech_gem"
+        },
+        
+        "S":
+        {
+            "item": "minecraft:stick"
+        },
+        
+        "P":
+        {
+            "item": "mttm:tech_axe"
+        },
+        
+        "C":
+        {
+            "item": "mttm:crafting_component_2"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mttm:tech_gem_axe",
+        "count": 1
+    }
+}

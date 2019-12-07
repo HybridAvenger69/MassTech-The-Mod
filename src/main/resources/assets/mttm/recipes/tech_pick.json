@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RCR",
+        " S ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mttm:tech_ingot"
+        },
+        
+        "S":
+        {
+            "item": "minecraft:stick"
+        },
+        
+        "C":
+        {
+            "item": "mttm:crafting_component"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mttm:tech_pick",
+        "count": 1
+    }
+}

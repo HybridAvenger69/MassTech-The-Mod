@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "mttm:nether_star_block" }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "R R",
+        "RCR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mttm:nether_star_fragment"
+        },
+        
+        "C":
+        {
+            "item": "mttm:crafting_component_3"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mttm:flight_gem_chestplate",
+        "count": 1
+    }
+}
