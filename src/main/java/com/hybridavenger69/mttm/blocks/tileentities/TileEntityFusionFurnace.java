@@ -1,6 +1,7 @@
 package com.hybridavenger69.mttm.blocks.tileentities;
 
-import com.hybridavenger69.mttm.blocks.BlockFusionFurnace;
+
+import com.hybridavenger69.mttm.blocks.machines.BlockFusionFurnace;
 import com.hybridavenger69.mttm.blocks.recipes.FusionFurnaceRecipes;
 
 import net.minecraft.block.Block;
@@ -8,12 +9,14 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
@@ -21,15 +24,15 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class TileEntityFusionFurnace extends TileEntity implements ITickable  
+public class TileEntityFusionFurnace extends TileEntity implements ITickable
 {
-
 	private ItemStackHandler handler = new ItemStackHandler(4);
 	private String customName;
 	private ItemStack smelting = ItemStack.EMPTY;
@@ -38,7 +41,7 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 	private int currentBurnTime;
 	private int cookTime;
 	private int totalCookTime = 200;
-	
+
 	@Override
 	public boolean hasCapability(Capability<?> capability, EnumFacing facing) 
 	{
@@ -86,10 +89,10 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) 
 	{
 		super.writeToNBT(compound);
-		compound.setInteger("BurnTime", (short)this.burnTime);
-		compound.setInteger("CookTime", (short)this.cookTime);
-		compound.setInteger("CookTimeTotal", (short)this.totalCookTime);
-		compound.setTag("Inventory", this.handler.serializeNBT());
+		 compound.setInteger("BurnTime", this.burnTime);
+	        compound.setInteger("CookTime", this.cookTime);
+	        compound.setInteger("CookTimeTotal", this.totalCookTime);
+	        NBTTagList nbttaglist = new NBTTagList();
 		
 		if(this.hasCustomName()) compound.setString("CustomName", this.customName);
 		return compound;
@@ -111,7 +114,7 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 		if(this.isBurning())
 		{
 			--this.burnTime;
-			BlockFusionFurnace.setState(true, world, pos);
+			BlockFusionFurnace.setState(false, world, pos);
 		}
 		
 		ItemStack[] inputs = new ItemStack[] {handler.getStackInSlot(0), handler.getStackInSlot(1)};
@@ -126,7 +129,7 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 				
 				if(this.isBurning() && !fuel.isEmpty())
 				{
-					net.minecraft.item.Item item = fuel.getItem();
+					Item item = fuel.getItem();
 					fuel.shrink(1);
 					
 					if(fuel.isEmpty())
@@ -161,7 +164,7 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 		{
 			if(this.canSmelt() && this.isBurning())
 			{
-				ItemStack output = FusionFurnaceRecipes.getInstance().getSinteringResult(inputs[0], inputs[1]);
+				ItemStack output = FusionFurnaceRecipes.getInstance().getFusionResult(inputs[0], inputs[1]);
 				if(!output.isEmpty())
 				{
 					smelting = output;
@@ -180,7 +183,7 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 		if(((ItemStack)this.handler.getStackInSlot(0)).isEmpty() || ((ItemStack)this.handler.getStackInSlot(1)).isEmpty()) return false;
 		else 
 		{
-			ItemStack result = FusionFurnaceRecipes.getInstance().getSinteringResult((ItemStack)this.handler.getStackInSlot(0), (ItemStack)this.handler.getStackInSlot(1));	
+			ItemStack result = FusionFurnaceRecipes.getInstance().getFusionResult((ItemStack)this.handler.getStackInSlot(0), (ItemStack)this.handler.getStackInSlot(1));	
 			if(result.isEmpty()) return false;
 			else
 			{
@@ -198,7 +201,7 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 		if(fuel.isEmpty()) return 0;
 		else 
 		{
-			net.minecraft.item.Item item = fuel.getItem();
+			Item item = fuel.getItem();
 
 			if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.AIR) 
 			{
@@ -215,9 +218,10 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 			if (item == Items.STICK) return 100;
 			if (item == Items.COAL) return 1600;
 			if (item == Items.LAVA_BUCKET) return 20000;
+			if (item == Item.getItemFromBlock(Blocks.SAPLING)) return 100;
 			if (item == Items.BLAZE_ROD) return 2400;
 
-			return GameRegistry.getFuelValue(fuel);
+			return ForgeEventFactory.getItemBurnTime(fuel);
 		}
 	}
 		
@@ -265,6 +269,8 @@ public class TileEntityFusionFurnace extends TileEntity implements ITickable
 			this.totalCookTime = value;
 		}
 	}
-	
-	
 }
+
+	
+	
+

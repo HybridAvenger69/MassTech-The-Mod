@@ -22,7 +22,7 @@ public class FusionFurnaceRecipes
 		return INSTANCE;
 	}
 	
-	private FusionFurnaceRecipes() 
+	public FusionFurnaceRecipes() 
 	{
 		//addFusionRecipe(new ItemStack(Blocks.ACACIA_FENCE), new ItemStack(Blocks.ACACIA_FENCE_GATE), new ItemStack(BlockInit.COPPER_CHEST), 5.0F);
 		addFusionRecipe(new ItemStack(Items.IRON_INGOT), new ItemStack(Items.NETHER_STAR), new ItemStack(ModItems.NETHER_INGOT), 5.0F);
@@ -31,12 +31,12 @@ public class FusionFurnaceRecipes
 	
 	public void addFusionRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) 
 	{
-		if(getSinteringResult(input1, input2) != ItemStack.EMPTY) return;
+		if(getFusionResult(input1, input2) != ItemStack.EMPTY) return;
 		this.smeltingList.put(input1, input2, result);
 		this.experienceList.put(result, Float.valueOf(experience));
 	}
 	
-	public ItemStack getSinteringResult(ItemStack input1, ItemStack input2) 
+	public ItemStack getFusionResult(ItemStack input1, ItemStack input2) 
 	{
 		for(Entry<ItemStack, Map<ItemStack, ItemStack>> entry : this.smeltingList.columnMap().entrySet()) 
 		{
@@ -75,4 +75,6 @@ public class FusionFurnaceRecipes
 		}
 		return 0.0F;
 	}
+
+
 }

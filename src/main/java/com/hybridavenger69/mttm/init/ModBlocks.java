@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hybridavenger69.mttm.blocks.BlockBase;
-import com.hybridavenger69.mttm.blocks.BlockFusionFurnace;
 import com.hybridavenger69.mttm.blocks.TechBlock;
 import com.hybridavenger69.mttm.blocks.TechGemBlock;
 import com.hybridavenger69.mttm.blocks.TechGemOre;
 import com.hybridavenger69.mttm.blocks.TechOre;
+import com.hybridavenger69.mttm.blocks.machines.BlockFusionFurnace;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
