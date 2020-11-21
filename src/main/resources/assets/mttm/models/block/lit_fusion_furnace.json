@@ -1,12 +1,12 @@
 {
     "parent": "block/orientable",
     "textures": {
-        "particle": "mttm:blocks/sintering_furnace_side",
-        "up": "mttm:blocks/sintering_furnace_side",
-        "down": "mttm:blocks/sintering_furnace_side",
-        "north": "mttm:blocks/sintering_furnace_front_on",
-        "east": "mttm:blocks/sintering_furnace_side",
-        "south": "mttm:blocks/sintering_furnace_side",
-        "west": "mttm:blocks/sintering_furnace_side"
+        "particle": "mttm:blocks/fusion_furnace_top",
+        "up": "mttm:blocks/fusion_furnace_top",
+        "down": "mttm:blocks/machine_bottom",
+        "north": "mttm:blocks/lit_fusion_furnace_front",
+        "east": "mttm:blocks/machine_side",
+        "south": "mttm:blocks/machine_side",
+        "west": "mttm:blocks/machine_side"
     }
 }

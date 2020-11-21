@@ -59,7 +59,7 @@ item.crafting_component_3.name=Crafting Component(Elite)
 item.nether_star_fragment.name=Nether Star Fragment
 item.diamond_cutting_knife.name=Diamond Cutting Knife
 //Tab
-itemGroup.mttmtab=MassTech: The Mod(Items)
+itemGroup.mttmtab=MassTech: The Mod
 //itemGroup.mttmtechtab=MassTech: The Mod(Machines)
 container.fusion_furnace=Fusion Furnace
 

@@ -1,4 +1,4 @@
-package com.hybridavenger69.mttm.util;
+package com.hybridavenger69.mttm.utils;
 
 public class Reference 
 {
@@ -11,6 +11,5 @@ public class Reference
 	public static final String COMMON_PROXY_CLASS = "com.hybridavenger69.mttm.proxy.CommonProxy";
 	
 	
-	public static final int GUI_FUSION_FURNACE = 1;
 	
 }

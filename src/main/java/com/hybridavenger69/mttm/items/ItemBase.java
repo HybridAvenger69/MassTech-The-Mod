@@ -1,19 +1,18 @@
 package com.hybridavenger69.mttm.items;
 
-import com.hybridavenger69.mttm.Main;
+import com.hybridavenger69.mttm.MTTM;
 import com.hybridavenger69.mttm.init.ModItems;
-import com.hybridavenger69.mttm.util.IHasModel;
+import com.hybridavenger69.mttm.utils.Interfaces.IHasModel;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ItemBase extends Item implements IHasModel {
+public class ItemBase extends Item implements IHasModel{
 
 	public ItemBase(String name)
 	{
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(Main.mttmtab);
+		setCreativeTab(MTTM.mttmtab);
 		
 		ModItems.ITEMS.add(this);
 	}
@@ -21,6 +20,6 @@ public class ItemBase extends Item implements IHasModel {
 	@Override
 	public void registerModels() 
 	{
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
+		MTTM.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 }
