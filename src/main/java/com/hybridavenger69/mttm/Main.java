@@ -5,6 +5,7 @@ import java.io.File;
 
 import com.hybridavenger69.mttm.proxy.CommonProxy;
 import com.hybridavenger69.mttm.utils.Reference;
+import com.hybridavenger69.mttm.utils.Handlers.RegistryHandler;
 import com.hybridavenger69.mttm.tabs.MttmTab;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -19,14 +20,14 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
-public class MTTM 
+public class Main 
 {
 
 	
 	public static File config;
 	
 	@Instance
-	public static MTTM Instance;
+	public static Main Instance;
 	
 	public static final CreativeTabs mttmtab = new MttmTab("mttmtab");
 	
@@ -36,14 +37,14 @@ public class MTTM
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)
 	{
-		
+		RegistryHandler.preInitRegistries(event);
 			
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-	
+		RegistryHandler.initRegistries(event);
 	  
 	}
 	@EventHandler

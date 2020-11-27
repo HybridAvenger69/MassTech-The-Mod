@@ -7,6 +7,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TileEntityHandler {
     public static void registerTileEntities() {
-        GameRegistry.registerTileEntity(TileEntityFusionFurnace.class, new ResourceLocation("mttm", "TileEntityFusionFurnace"));
+        GameRegistry.registerTileEntity(TileEntityFusionFurnace.class, new ResourceLocation("mttm", "fusion_furnace"));
     }
 }

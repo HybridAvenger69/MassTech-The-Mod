@@ -1,6 +1,7 @@
 package com.hybridavenger69.mttm.blocks;
 
-import com.hybridavenger69.mttm.MTTM;
+
+import com.hybridavenger69.mttm.Main;
 import com.hybridavenger69.mttm.init.ModBlocks;
 import com.hybridavenger69.mttm.init.ModItems;
 import com.hybridavenger69.mttm.utils.Interfaces.IHasModel;
@@ -19,7 +20,7 @@ public class BlockBase extends Block implements IHasModel
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(MTTM.mttmtab);
+		setCreativeTab(Main.mttmtab);
 		
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
@@ -28,6 +29,6 @@ public class BlockBase extends Block implements IHasModel
 	@Override
 	public void registerModels() 
 	{
-		MTTM.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+		Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 	}
 }

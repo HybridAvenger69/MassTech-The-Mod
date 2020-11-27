@@ -2,6 +2,7 @@
 item.tech_ingot.name=Tech Ingot
 item.tech_gem.name=Tech Gem
 item.tech_dust.name=Tech Dust
+item.nether_ingot.name=Nether Ingot
 
 //Blocks
 tile.tech_block.name=Tech Block
@@ -50,6 +51,10 @@ tooltip.flightarmor_2=Night Vision
 tooltip.flightarmor_3=Fire Resistance
 tooltip.flightarmor_4=Resistance
 
+//Machines
+container.fusion_furnace=Fusion Furnace
+tile.fusion_furnace.name=Fusion Furnace
+
 
 
 //Other
@@ -61,8 +66,8 @@ item.diamond_cutting_knife.name=Diamond Cutting Knife
 //Tab
 itemGroup.mttmtab=MassTech: The Mod
 //itemGroup.mttmtechtab=MassTech: The Mod(Machines)
-container.fusion_furnace=Fusion Furnace
 
+   
 //Food
 item.good_apple.name=Apple(Health Boost)
 

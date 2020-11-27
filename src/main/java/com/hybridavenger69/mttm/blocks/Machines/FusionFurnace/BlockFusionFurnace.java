@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import com.hybridavenger69.mttm.MTTM;
+import com.hybridavenger69.mttm.Main;
 import com.hybridavenger69.mttm.blocks.BlockBase;
 import com.hybridavenger69.mttm.init.ModBlocks;
 import com.hybridavenger69.mttm.utils.Handlers.ConfigHandler;
@@ -63,7 +63,7 @@ public class BlockFusionFurnace extends BlockBase implements ITileEntityProvider
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
-            playerIn.openGui(MTTM.Instance, ConfigHandler.FUSION_FURNACE_GUI, worldIn, pos.getX(), pos.getY(), pos.getZ());
+            playerIn.openGui(Main.Instance, ConfigHandler.FUSION_FURNACE_GUI, worldIn, pos.getX(), pos.getY(), pos.getZ());
         }
 
         return true;
@@ -132,7 +132,7 @@ public class BlockFusionFurnace extends BlockBase implements ITileEntityProvider
         return EnumBlockRenderType.MODEL;
     }
 
-    @Override
+    
     public IBlockState withRotation(IBlockState state, Rotation rot) {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
     }

@@ -5,7 +5,10 @@ import java.util.Map;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Table;
+import com.hybridavenger69.mttm.init.ModItems;
 
+
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class FusionFurnaceRecipes {
@@ -18,14 +21,8 @@ public class FusionFurnaceRecipes {
     }
 
     private FusionFurnaceRecipes() {
-        //addFusionFurnaceRecipe(new ItemStack(ItemInit.INGOT_COPPER), new ItemStack(ItemInit.INGOT_TIN), new ItemStack(ItemInit.INGOT_BRONZE, 2), 2.0F);
-        //addFusionFurnaceRecipe(new ItemStack(ItemInit.DUST_COPPER), new ItemStack(ItemInit.DUST_TIN), new ItemStack(ItemInit.INGOT_BRONZE, 2), 2.0F);
-
-        //addFusionFurnaceRecipe(new ItemStack(ItemInit.INGOT_SILVER), new ItemStack(Items.GOLD_INGOT), new ItemStack(ItemInit.INGOT_ELECTRUM, 2), 2.0F);
-        //addFusionFurnaceRecipe(new ItemStack(ItemInit.DUST_SILVER), new ItemStack(ItemInit.DUST_GOLD), new ItemStack(ItemInit.INGOT_ELECTRUM, 2), 2.0F);
-
-        //addFusionFurnaceRecipe(new ItemStack(ItemInit.BLANK_CORE), new ItemStack(Items.SUGAR), new ItemStack(ItemInit.SPEED_CORE, 1), 2.0F);
-        //addFusionFurnaceRecipe(new ItemStack(ItemInit.BLANK_CORE), new ItemStack(ItemInit.MAGNET), new ItemStack(ItemInit.MAGNET_CORE, 1), 2.0F);
+        addFusionFurnaceRecipe(new ItemStack(Items.IRON_INGOT, 2), new ItemStack(Items.NETHER_STAR, 1), new ItemStack(ModItems.NETHER_INGOT, 2), 2.0F);
+   
     }
 
 

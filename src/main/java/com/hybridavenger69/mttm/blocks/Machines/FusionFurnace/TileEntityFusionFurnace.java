@@ -28,8 +28,11 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+
 
 public class TileEntityFusionFurnace extends TileEntity implements IInventory, ITickable, ISidedInventory {
     private NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -295,7 +298,8 @@ public class TileEntityFusionFurnace extends TileEntity implements IInventory, I
             if (item == Item.getItemFromBlock(Blocks.SAPLING)) return 100;
             if (item == Items.BLAZE_ROD) return 2400;
 
-            return TileEntityFusionFurnace.getItemBurnTime(fuel);
+            return ForgeEventFactory.getItemBurnTime(fuel);
+            
         }
     }
 

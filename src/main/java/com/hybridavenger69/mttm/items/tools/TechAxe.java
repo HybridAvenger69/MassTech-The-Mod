@@ -1,6 +1,6 @@
 package com.hybridavenger69.mttm.items.tools;
 
-import com.hybridavenger69.mttm.MTTM;
+import com.hybridavenger69.mttm.Main;
 import com.hybridavenger69.mttm.init.ModItems;
 import com.hybridavenger69.mttm.utils.Interfaces.IHasModel;
 
@@ -15,7 +15,7 @@ public class TechAxe extends ItemAxe implements IHasModel
 		          super(material, 6.0F, -3.2F);
 		          setUnlocalizedName(name);
 		          setRegistryName(name);
-		          setCreativeTab(MTTM.mttmtab);
+		          setCreativeTab(Main.mttmtab);
 		          
 		          
 		          ModItems.ITEMS.add(this);
@@ -24,7 +24,7 @@ public class TechAxe extends ItemAxe implements IHasModel
 	
 	@Override
 	public void registerModels() {
-		MTTM.proxy.registerItemRenderer(this, 0, "inventory");
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 	
 }
