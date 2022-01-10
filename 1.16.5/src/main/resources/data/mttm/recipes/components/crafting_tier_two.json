@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "STS",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "mttm:euclase_gem"
+    },
+    "T": {
+      "item": "mttm:crafting_component"
+    },
+    "S": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "mttm:crafting_component_2"
+  }
+}

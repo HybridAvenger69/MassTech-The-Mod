@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mttm",
+  "name": "MassTech: The Mod",
+  "description": "Mod For MassTech ModPacks.",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/masstech-the-mod",
+  "updateUrl": "",
+  "authorList": ["HybridAvenger69"],
+  "credits": "Former Author MiningMark48",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

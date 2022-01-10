@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "mttm:tech_ingot"
+    },
+    "S": {
+      "item": "mttm:crafting_component"
+    }
+  },
+  "result": {
+    "item": "mttm:tech_helmet"
+  }
+}

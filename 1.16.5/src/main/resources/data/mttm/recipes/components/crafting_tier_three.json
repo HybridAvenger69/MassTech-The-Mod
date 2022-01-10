@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "STS",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "mttm:nether_ingot"
+    },
+    "T": {
+      "item": "mttm:crafting_component_2"
+    },
+    "S": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "mttm:crafting_component_3"
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " C ",
+        " R ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mttm:tech_ingot"
+        },
+        
+        "S":
+        {
+            "item": "minecraft:stick"
+        },
+        
+        "C":
+        {
+            "item": "mttm:crafting_component"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mttm:tech_sword",
+        "count": 1
+    }
+}

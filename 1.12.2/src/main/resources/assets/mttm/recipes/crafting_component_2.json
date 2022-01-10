@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "IRI",
+        "RCR",
+        "IRI"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mttm:tech_ingot"
+        },
+        
+        "I":
+        {
+            "item": "minecraft:diamond"
+        },
+        
+        "C":
+        {
+            "item": "mttm:crafting_component"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mttm:crafting_component_2",
+        "count": 1
+    }
+}

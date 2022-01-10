@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "RCR",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mttm:tech_ingot"
+        },
+        
+        "C":
+        {
+            "item": "mttm:crafting_component"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mttm:tech_leggings",
+        "count": 1
+    }
+}

@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "mttm:nether_ingot"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "mttm:nether_ingot_nuggets",
+        "count": 9
+    }
+}

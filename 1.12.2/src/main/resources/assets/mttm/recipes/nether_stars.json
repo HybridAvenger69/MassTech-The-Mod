@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "mttm:nether_star_block"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "minecraft:nether_star",
+        "count": 9
+    }
+}
