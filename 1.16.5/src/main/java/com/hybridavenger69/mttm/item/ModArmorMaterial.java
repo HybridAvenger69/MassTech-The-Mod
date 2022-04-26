@@ -1,5 +1,6 @@
 package com.hybridavenger69.mttm.item;
 
+import com.hybridavenger69.lib.main.ItemRegistry;
 import com.hybridavenger69.mttm.Mttm;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -16,17 +17,17 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
     TECH("tech", 4, new int[] { 2, 5, 6, 2 }, 7,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> {
-        return Ingredient.fromItems(ModItems.TECH_INGOT.get());
+        return Ingredient.fromItems(ItemRegistry.TECH_INGOT.get());
     }),
 
     EUCLASE("euclase", 4, new int[] { 4, 7, 9, 4 }, 13,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, 0.0f, () -> {
-        return Ingredient.fromItems(ModItems.EUCLASE_GEM.get());
+        return Ingredient.fromItems(ItemRegistry.EUCLASE_GEM.get());
     }),
 
     ICARUS("icarus", 4, new int[] { 5, 8, 10, 5 }, 16,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, 0.0f, () -> {
-        return Ingredient.fromItems(ModItems.NETHER_INGOT.get());
+        return Ingredient.fromItems(ItemRegistry.NETHER_INGOT.get());
     });
 
 

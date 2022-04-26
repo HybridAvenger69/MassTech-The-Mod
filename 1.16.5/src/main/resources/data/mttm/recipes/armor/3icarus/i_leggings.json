@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "mttm:nether_ingot"
+      "item": "lib:nether_ingot"
     },
     "S": {
       "item": "mttm:crafting_component_3"

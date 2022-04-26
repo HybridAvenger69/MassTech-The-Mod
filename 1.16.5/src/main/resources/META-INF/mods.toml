@@ -32,3 +32,10 @@ description='''Mod for the Masstech Modpacks'''
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.mttm]]
+   modId="lib"
+   mandatory=true
+   versionRange="[1.2,)"
+   ordering="AFTER"
+   side="BOTH"

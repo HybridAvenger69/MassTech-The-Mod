@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "mttm:nether_ingot",
+    "item": "lib:nether_ingot",
     "count": 3
   }
 }

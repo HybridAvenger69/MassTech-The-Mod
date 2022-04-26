@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "mttm:tech_ingot"
+      "item": "lib:tech_ingot"
     },
     "S": {
       "item": "mttm:crafting_component"

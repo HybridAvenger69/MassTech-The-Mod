@@ -1,7 +1,7 @@
 package com.hybridavenger69.mttm.block;
 
+import com.hybridavenger69.lib.main.MtGroup;
 import com.hybridavenger69.mttm.Mttm;
-import com.hybridavenger69.mttm.item.ModItemGroup;
 import com.hybridavenger69.mttm.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -47,7 +47,7 @@ public class ModBlocks {
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().group(ModItemGroup.MTTM_GROUP)));
+                new Item.Properties().group(MtGroup.MT_GROUP)));
     }
 
     public static void register(IEventBus eventBus){

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mttm:euclase_gem"
+          "name": "lib:euclase_gem"
         }
       ]
     }

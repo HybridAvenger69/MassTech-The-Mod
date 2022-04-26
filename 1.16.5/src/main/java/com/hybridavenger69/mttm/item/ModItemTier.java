@@ -1,6 +1,6 @@
 package com.hybridavenger69.mttm.item;
 
-import net.minecraft.entity.player.PlayerAbilities;
+import com.hybridavenger69.lib.main.ItemRegistry;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
@@ -10,10 +10,10 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier {
 
     TECH(2, 350, 3.5f, 4f, 7,
-            () -> Ingredient.fromItems(ModItems.TECH_INGOT.get())),
+            () -> Ingredient.fromItems(ItemRegistry.TECH_INGOT.get())),
 
     EUCLASE(3, 760, 5f, 9f, 11,
-            () -> Ingredient.fromItems(ModItems.EUCLASE_GEM.get()));
+            () -> Ingredient.fromItems(ItemRegistry.EUCLASE_GEM.get()));
 
     private final int harvestLevel;
     private final int maxUses;
