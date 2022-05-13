@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "hlib:euclase_gem"
+    }
+  },
+  "result": {
+    "item": "mttm:euclase_block"
+  }
+}

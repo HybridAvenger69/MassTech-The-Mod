@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "hlib:nether_ingot"
+    },
+    "S": {
+      "item": "mttm:crafting_component_3"
+    }
+  },
+  "result": {
+    "item": "mttm:icarus_leggings"
+  }
+}

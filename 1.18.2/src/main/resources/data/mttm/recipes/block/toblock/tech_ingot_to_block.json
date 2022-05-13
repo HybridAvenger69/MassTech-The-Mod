@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "hlib:tech_ingot"
+    }
+  },
+  "result": {
+    "item": "mttm:tech_block"
+  }
+}

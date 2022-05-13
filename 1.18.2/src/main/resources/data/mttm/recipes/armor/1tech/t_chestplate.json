@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hlib:tech_ingot"
+    },
+    "S": {
+      "item": "mttm:crafting_component"
+    }
+  },
+  "result": {
+    "item": "mttm:tech_chestplate"
+  }
+}
