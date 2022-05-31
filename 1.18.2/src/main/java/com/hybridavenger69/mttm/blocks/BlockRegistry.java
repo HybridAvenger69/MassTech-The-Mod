@@ -22,24 +22,23 @@ public class BlockRegistry {
 
     // Tech Ores
     public static final RegistryObject<Block> TECH_ORE = registerBlock("tech_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> END_TECH_ORE = registerBlock("end_tech_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> NETHER_TECH_ORE = registerBlock("nether_tech_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_TECH_ORE = registerBlock("deepslate_tech_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()));
+
+
 
     //Euclase Ores
     public static final RegistryObject<Block> EUCLASE_ORE = registerBlock("euclase_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DEEPSLATE_EUCLASE_ORE = registerBlock("deepslate_euclase_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops()));
 
 
 
-    //Machines(Maybe)
+    //Blocks
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

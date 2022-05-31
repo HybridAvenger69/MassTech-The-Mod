@@ -81,7 +81,11 @@ public class Mttm
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
             // Register a new block here
-            LOGGER.info("HELLO from Register Block");
+            BlockRegistry.EUCLASE_ORE.get();
+            BlockRegistry.DEEPSLATE_EUCLASE_ORE.get();
+            BlockRegistry.TECH_ORE.get();
+            BlockRegistry.DEEPSLATE_TECH_ORE.get();
+            LOGGER.info("HELLO from HybridAvenger69");
         }
     }
 }

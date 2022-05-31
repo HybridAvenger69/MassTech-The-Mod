@@ -12,4 +12,8 @@ public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> TECH_ORE_PLACED = PlacementUtils.register("tech_ore_placed",
             ModConfiguredFeatures.TECH_ORE, ModOrePlacement.commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+    public static final Holder<PlacedFeature> EUCLASE_ORE_PLACED = PlacementUtils.register("euclase_ore_placed",
+            ModConfiguredFeatures.EUCLASE_ORE, ModOrePlacement.commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 }

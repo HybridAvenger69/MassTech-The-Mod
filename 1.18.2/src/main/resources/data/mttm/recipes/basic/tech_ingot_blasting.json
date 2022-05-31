@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "mttm:tech_ore"
+    "item": "hlib:raw_tech"
   },
   "result": "hlib:tech_ingot",
   "experience": 0.1,

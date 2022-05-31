@@ -6,6 +6,8 @@
   "item.mttm.euclase_gem": "Euclase Gem",
   "item.mttm.nether_ingot": "Nether Ingot",
   "block.mttm.euclase_ore": "Euclase Ore",
+  "block.mttm.deepslate_tech_ore": "DeepSlate Tech Ore",
+  "block.mttm.deepslate_euclase_ore": "DeepSlate Euclase Ore",
   "block.mttm.euclase_block": "Block of Euclase",
   "block.mttm.tech_ore": "Tech Ore",
   "block.mttm.tech_block": "Block of Tech",
@@ -30,6 +32,6 @@
   "item.mttm.icarus_leggings": "ICarus Leggings",
   "item.mttm.icarus_boots": "ICarus Boots",
   "tooltip.mttm.icarus": "Hold \u00A7eSHIFT\u00A7r for more Information!",
-  "tooltip.mttm.icarus_shift": "Wearing Full Armor Gives Regen!",
-  "itemGroup.mttmTab": "MassTech: The Mod"
+  "tooltip.mttm.icarus_shift": "Wearing Full Armor Gives Regen!"
+
 }
