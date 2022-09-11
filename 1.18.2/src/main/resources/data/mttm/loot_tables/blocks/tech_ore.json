@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": {
+        "min": 1,
+        "max": 4
+      },
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "hlib:raw_tech"
+          "type": "item",
+          "name": "hlib:raw_tech",
+          "weight": 1
         }
       ]
     }

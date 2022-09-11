@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "hlib:nether_ingot"
+    }
+  },
+  "result": {
+    "item": "mttm:nether_ingot_block"
+  }
+}

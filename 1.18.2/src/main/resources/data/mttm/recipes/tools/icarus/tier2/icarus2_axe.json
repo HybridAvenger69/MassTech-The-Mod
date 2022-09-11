@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "mttm:icarus_axe"
+  },
+  "addition": {
+    "item": "mttm:double_netherite_ingot"
+  },
+  "result": {
+    "item": "mttm:icarus2_axe"
+  }
+}

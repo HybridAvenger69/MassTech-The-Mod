@@ -2,6 +2,11 @@ package com.hybridavenger69.mttm.items.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.hybridavenger69.mttm.items.tiers.ArmorTiers;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -11,8 +16,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Map;
 
 public class Icarus extends ArmorItem {  private static final Map<ArmorMaterial, MobEffect> MATERIAL_TO_EFFECT_MAP =
@@ -61,6 +70,20 @@ public class Icarus extends ArmorItem {  private static final Map<ArmorMaterial,
                 //}
             }
         }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        if(Screen.hasShiftDown()) {
+            pTooltipComponents.add(new TranslatableComponent("tooltip.mttm.icarus_shift"));
+        } else {
+            pTooltipComponents.add(new TranslatableComponent("tooltip.mttm.icarus"));
+        }
+    }
+
+    private void outputValuableCoordinates(BlockPos blockPos, Player player, Block blockBelow) {
+        player.sendMessage(new TextComponent("Found " + blockBelow.asItem().getRegistryName().toString() + " at " +
+                "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), player.getUUID());
+    }
 
         private boolean hasFullSuitOfArmorOn(Player player) {
             ItemStack boots = player.getInventory().getArmor(0);

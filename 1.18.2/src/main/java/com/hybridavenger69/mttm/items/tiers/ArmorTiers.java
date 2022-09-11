@@ -12,17 +12,17 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ArmorTiers implements ArmorMaterial {
-    TECH("tech", 4, new int[]{2, 5, 6, 2}, 7, SoundEvents.ARMOR_EQUIP_IRON,
+    TECH("tech", 50, new int[]{2, 5, 6, 2}, 7, SoundEvents.ARMOR_EQUIP_IRON,
             4.0F, 0.2F, () -> {
         return Ingredient.of(ItemRegistry.TECH_INGOT.get());
     }),
 
-    EUCLASE("euclase", 4, new int[]{4, 7, 9, 4}, 13, SoundEvents.ARMOR_EQUIP_DIAMOND,
+    EUCLASE("euclase", 100, new int[]{4, 7, 9, 4}, 13, SoundEvents.ARMOR_EQUIP_DIAMOND,
             4.0F, 0.2F, () -> {
         return Ingredient.of(ItemRegistry.EUCLASE_GEM.get());
     }),
 
-    ICARUS("icarus", 4, new int[]{5, 8, 10, 5}, 16, SoundEvents.ARMOR_EQUIP_NETHERITE,
+    ICARUS("icarus", 150, new int[]{5, 8, 10, 5}, 16, SoundEvents.ARMOR_EQUIP_NETHERITE,
             4.0F, 0.2F, () -> {
         return Ingredient.of(ItemRegistry.NETHER_INGOT.get());
     });

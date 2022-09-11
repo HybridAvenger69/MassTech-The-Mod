@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "hlib:euclase_gem"
+          "type": "item",
+          "name": "hlib:euclase_gem",
+          "weight": 1
         }
       ]
     }

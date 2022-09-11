@@ -1,8 +1,14 @@
 package com.hybridavenger69.mttm;
 
 import com.hybridavenger69.mttm.blocks.BlockRegistry;
+import com.hybridavenger69.mttm.fluid.FluidRegistry;
+import com.hybridavenger69.mttm.items.registry.ArmorRegistry;
 import com.hybridavenger69.mttm.items.registry.ItemRegistry;
+import com.hybridavenger69.mttm.items.registry.ToolRegistry;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.ItemFrameRenderer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,6 +17,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -37,10 +44,19 @@ public class Mttm
         // Mod Registers
         ItemRegistry.register(eventBus);
         BlockRegistry.register(eventBus);
+        ArmorRegistry.register(eventBus);
+        ToolRegistry.register(eventBus);
+        FluidRegistry.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(FluidRegistry.CRYOTHEUM_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(FluidRegistry.CRYOTHEUM_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(FluidRegistry.CRYOTHEUM_FLOWING.get(), RenderType.translucent());
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -53,8 +69,10 @@ public class Mttm
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // Some example code to dispatch IMC to another mod
-        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        InterModComms.sendTo("mttm", "helloworld", () -> { LOGGER.info("Hello world from HybridAvenger69"); return "Hello world";});
     }
+
+
 
     private void processIMC(final InterModProcessEvent event)
     {
@@ -69,7 +87,7 @@ public class Mttm
     public void onServerStarting(ServerStartingEvent event)
     {
         // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        LOGGER.info("HELLO from HybridAvenger69");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -81,10 +99,6 @@ public class Mttm
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
             // Register a new block here
-            BlockRegistry.EUCLASE_ORE.get();
-            BlockRegistry.DEEPSLATE_EUCLASE_ORE.get();
-            BlockRegistry.TECH_ORE.get();
-            BlockRegistry.DEEPSLATE_TECH_ORE.get();
             LOGGER.info("HELLO from HybridAvenger69");
         }
     }

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mttm:item/nether_ingot"
+    "layer0": "mttm:item/double_netherite_ingot"
 
   }
 }
