@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mttm:block/nether_ingot_block"
-  }
-}

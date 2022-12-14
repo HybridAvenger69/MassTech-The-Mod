@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mttm:block/deepslate_euclase_ore"
-  }
-}

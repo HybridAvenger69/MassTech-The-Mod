@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "hybridlib:raw_tech"
-  },
-  "result": "hybridlib:tech_ingot",
-  "experience": 0.1,
-  "cookingtime": 175
-}
