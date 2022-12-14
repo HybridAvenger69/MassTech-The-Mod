@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    " T ",
+    " T "
+  ],
+  "key": {
+    "#": {
+      "item": "hybridlib:tech_ingot"
+    },
+    "S": {
+      "item": "mttm:crafting_component"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mttm:tech_pick"
+  }
+}

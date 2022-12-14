@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mttm:block/deepslate_tech_ore"
+  }
+}
