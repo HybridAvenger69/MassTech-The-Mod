@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:bread"
+  },
+  "result": "mttm:toasted_bread",
+  "experience": 1.0,
+  "cookingtime": 100
+}

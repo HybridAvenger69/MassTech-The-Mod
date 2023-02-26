@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mttm:item/icarus2_pickaxe"
+  }
+}

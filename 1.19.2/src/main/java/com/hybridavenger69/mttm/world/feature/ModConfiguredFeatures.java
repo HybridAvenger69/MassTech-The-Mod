@@ -1,17 +1,16 @@
 package com.hybridavenger69.mttm.world.feature;
 
 import com.google.common.base.Suppliers;
+
 import com.hybridavenger69.mttm.MTTM;
 import com.hybridavenger69.mttm.blocks.BlockRegistry;
-import net.minecraft.core.Holder;
+
 import net.minecraft.core.Registry;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;

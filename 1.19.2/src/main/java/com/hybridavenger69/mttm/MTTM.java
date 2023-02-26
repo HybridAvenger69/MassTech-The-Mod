@@ -2,10 +2,7 @@ package com.hybridavenger69.mttm;
 
 
 import com.hybridavenger69.mttm.blocks.BlockRegistry;
-import com.hybridavenger69.mttm.items.registry.ArmorRegistry;
-import com.hybridavenger69.mttm.items.registry.ItemRegistry;
-import com.hybridavenger69.mttm.items.registry.OtherRegistry;
-import com.hybridavenger69.mttm.items.registry.ToolRegistry;
+import com.hybridavenger69.mttm.items.registry.*;
 import com.hybridavenger69.mttm.world.feature.ModConfiguredFeatures;
 import com.hybridavenger69.mttm.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
@@ -33,14 +30,16 @@ public class MTTM {
     public MTTM() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        BlockRegistry.register(modEventBus);
-        ArmorRegistry.register(modEventBus);
-        ItemRegistry.register(modEventBus);
-        ToolRegistry.register(modEventBus);
-        OtherRegistry.register(modEventBus);
+        ArmorRegistry.ITEMS.register(modEventBus);
+        BlockRegistry.BLOCKS.register(modEventBus);
+        FoodRegistry.ITEMS.register(modEventBus);
+        ItemRegistry.ITEMS.register(modEventBus);
+        ToolRegistry.ITEMS.register(modEventBus);
+        OtherRegistry.ITEMS.register(modEventBus);
 
-        ModConfiguredFeatures.register(modEventBus);
-        ModPlacedFeatures.register(modEventBus);
+
+        ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);
+        ModPlacedFeatures.PLACED_FEATURES.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

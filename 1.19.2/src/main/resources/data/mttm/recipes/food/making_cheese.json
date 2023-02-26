@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mttm:milkbottle"
+  },
+  "result": "mttm:cheese",
+  "experience": 1.0,
+  "cookingtime": 100
+}

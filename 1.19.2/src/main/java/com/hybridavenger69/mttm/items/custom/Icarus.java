@@ -1,12 +1,8 @@
 package com.hybridavenger69.mttm.items.custom;
 
 import com.google.common.collect.ImmutableMap;
-import com.hybridavenger69.mttm.items.tiers.ArmorTiers;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.contents.TranslatableContents;
-import net.minecraft.network.chat.contents.TranslatableFormatException;
+import com.hybridavenger69.mttm.items.registry.ArmorRegistry;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -16,17 +12,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class Icarus extends ArmorItem {  private static final Map<ArmorMaterial, MobEffect> MATERIAL_TO_EFFECT_MAP =
         (new ImmutableMap.Builder<ArmorMaterial, MobEffect>())
-                .put(ArmorTiers.ICARUS, MobEffects.REGENERATION).build();
+                .put(ArmorRegistry.ArmorTiers.ICARUS, MobEffects.REGENERATION).build();
 
     public Icarus(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
@@ -65,9 +58,9 @@ public class Icarus extends ArmorItem {  private static final Map<ArmorMaterial,
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
             player.addEffect(new MobEffectInstance(mapStatusEffect, 400));
 
-            //if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
-            //    player.getInventory().hurtArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-            //}
+            ///if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
+             ///   player.getInventory().hurtArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
+            ///}
         }
     }
 
