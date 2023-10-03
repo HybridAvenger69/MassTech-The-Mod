@@ -24,7 +24,5 @@ public class ItemRegistry {
             () -> new Item(new Item.Properties().tab(MtGroup.MT_GROUP)));
 
 
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
+
 }

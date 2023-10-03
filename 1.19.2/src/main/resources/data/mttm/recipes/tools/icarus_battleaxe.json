@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#T#",
+    " T "
+  ],
+  "key": {
+    "#": {
+      "item": "mttm:nether_ingot_block"
+    },
+    "S": {
+      "item": "mttm:crafting_component_3"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mttm:icarus_battleaxe"
+  }
+}

@@ -35,13 +35,6 @@ public class BlockRegistry {
     public static final RegistryObject<Block> EUCLASE_ORE = register("euclase_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).requiresCorrectToolForDrops()),
             new Item.Properties().tab(MtGroup.MT_GROUP));
-    public static final RegistryObject<Block> DEEPSLATE_TECH_ORE = register("deepslate_tech_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE).requiresCorrectToolForDrops()),
-            new Item.Properties().tab(MtGroup.MT_GROUP));
-
-    public static final RegistryObject<Block> TECH_ORE = register("tech_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).requiresCorrectToolForDrops()),
-            new Item.Properties().tab(MtGroup.MT_GROUP));
 
 
     //Nether Ores(WIP)
@@ -66,16 +59,7 @@ public class BlockRegistry {
 
 
 
-     public static class Tags {
-         public static final TagKey<Block> NEEDS_TECH_TOOL = create("mineable/needs_tech_tool");
 
-         private static TagKey<Block> create(String location) {
-             return BlockTags.create(new ResourceLocation(MTTM.MOD_ID, location));
-
-
-         }
-
-     }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

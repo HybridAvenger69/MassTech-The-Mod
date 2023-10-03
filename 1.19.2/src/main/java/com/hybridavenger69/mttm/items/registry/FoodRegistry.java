@@ -1,10 +1,8 @@
 package com.hybridavenger69.mttm.items.registry;
 
 
-import com.hybridavenger69.hybridlib.main.MtGroup;
 import com.hybridavenger69.mttm.MTTM;
-import com.hybridavenger69.mttm.items.apples.Health;
-import com.hybridavenger69.mttm.items.apples.Water;
+import com.hybridavenger69.mttm.items.apples.*;
 import com.hybridavenger69.mttm.items.custom.Foods;
 import com.hybridavenger69.mttm.utils.MtFood;
 import net.minecraft.world.item.Item;
@@ -43,6 +41,23 @@ public class FoodRegistry {
 
      public static final RegistryObject<Item> WATER_APPLE = ITEMS.register("water_apple",
              () -> new Water(new Item.Properties().tab(MtFood.MT_FOOD).stacksTo(16).food(Foods.WATER_APPLE)));
+
+     public static final RegistryObject<Item> REGEN_APPLE = ITEMS.register("regen_apple",
+             () -> new Regeneration(new Item.Properties().tab(MtFood.MT_FOOD).stacksTo(16).food(Foods.REGEN_APPLE)));
+
+     public static final RegistryObject<Item> ABSORP_APPLE = ITEMS.register("absorp_apple",
+             () -> new Absorp(new Item.Properties().tab(MtFood.MT_FOOD).stacksTo(16).food(Foods.ABSORP_APPLE)));
+
+     public static final RegistryObject<Item> NIGHT_APPLE = ITEMS.register("night_apple",
+             () -> new Night(new Item.Properties().tab(MtFood.MT_FOOD).stacksTo(16).food(Foods.NIGHT_APPLE)));
+
+     public static final RegistryObject<Item> DAMAGE_APPLE = ITEMS.register("damage_apple",
+             () -> new Damage(new Item.Properties().tab(MtFood.MT_FOOD).stacksTo(16).food(Foods.DAMAGE_APPLE)));
+
+     public static final RegistryObject<Item> DIG_APPLE = ITEMS.register("dig_apple",
+             () -> new Dig(new Item.Properties().tab(MtFood.MT_FOOD).stacksTo(16).food(Foods.DIG_APPLE)));
+
+
 
 
 

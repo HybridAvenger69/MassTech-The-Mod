@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "mttm:icarus_sword"
+  },
+  "addition": {
+    "item": "hybridlib:double_netherite_ingot"
+  },
+  "result": {
+    "item": "mttm:icarus2_sword"
+  }
+}

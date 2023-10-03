@@ -16,11 +16,6 @@ public class ModPlacedFeatures {
             DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, MTTM.MOD_ID);
 
 
-    public static final RegistryObject<PlacedFeature> TECH_ORE_PLACED = PLACED_FEATURES.register("tech_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.TECH_ORE.getHolder().get(),
-                    commonOrePlacement(7, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-40), VerticalAnchor.aboveBottom(70)))));
-
     public static final RegistryObject<PlacedFeature> EUCLASE_ORE_PLACED = PLACED_FEATURES.register("euclase_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.EUCLASE_ORE.getHolder().get(),
                     commonOrePlacement(5, // VeinsPerChunk

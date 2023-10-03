@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " S ",
+    " T "
+  ],
+  "key": {
+    "#": {
+      "item": "mttm:tech_block"
+    },
+    "S": {
+      "item": "mttm:crafting_component"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mttm:tech_excavator"
+  }
+}

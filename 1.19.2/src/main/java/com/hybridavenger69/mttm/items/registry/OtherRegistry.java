@@ -14,11 +14,13 @@ public class OtherRegistry {
             DeferredRegister.create(ForgeRegistries.ITEMS, MTTM.MOD_ID);
 
     //Netherite Tiers
-    public static final RegistryObject<Item> DOUBLE_NETHERITE_INGOT = ITEMS.register("double_netherite_ingot",
-            () -> new Item(new Item.Properties().tab(MtGroup.MT_GROUP)));
 
 
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+
+
+    private static Item.Properties props() {
+        return new Item.Properties().tab(MtGroup.MT_GROUP);
     }
+
+
 }

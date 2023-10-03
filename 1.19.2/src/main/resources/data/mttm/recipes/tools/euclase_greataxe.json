@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #S",
+    " T#",
+    " T "
+  ],
+  "key": {
+    "#": {
+      "item": "mttm:euclase_block"
+    },
+    "S": {
+      "item": "mttm:crafting_component_2"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mttm:euclase_greataxe"
+  }
+}

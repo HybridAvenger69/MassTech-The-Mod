@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "mttm:block/cryo_fluid" }
+  }
+}

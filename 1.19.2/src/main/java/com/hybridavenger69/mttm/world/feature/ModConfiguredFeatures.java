@@ -23,17 +23,11 @@ public class ModConfiguredFeatures {
             DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, MTTM.MOD_ID);
 
     //ORE
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_TECH_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockRegistry.TECH_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockRegistry.DEEPSLATE_TECH_ORE.get().defaultBlockState())));
-
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_EUCLASE_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockRegistry.EUCLASE_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockRegistry.DEEPSLATE_EUCLASE_ORE.get().defaultBlockState())));
 
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> TECH_ORE = CONFIGURED_FEATURES.register("tech_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_TECH_ORES.get(),7)));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> EUCLASE_ORE = CONFIGURED_FEATURES.register("euclase_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_EUCLASE_ORES.get(),9)));

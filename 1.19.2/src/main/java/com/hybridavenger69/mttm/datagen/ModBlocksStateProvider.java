@@ -22,8 +22,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(BlockRegistry.DEEPSLATE_EUCLASE_ORE.get());
         simpleBlock(BlockRegistry.EUCLASE_ORE.get());
-        simpleBlock(BlockRegistry.DEEPSLATE_TECH_ORE.get());
-        simpleBlock(BlockRegistry.TECH_ORE.get());
+
 
 
     }

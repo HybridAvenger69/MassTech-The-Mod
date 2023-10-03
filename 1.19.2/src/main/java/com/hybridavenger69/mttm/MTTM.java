@@ -29,13 +29,27 @@ public class MTTM {
 
     public MTTM() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        var bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        bus.register(this);
+
+        ///MtConfig.loadConfig(MtConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("mttm_config.toml"));
 
         ArmorRegistry.ITEMS.register(modEventBus);
         BlockRegistry.BLOCKS.register(modEventBus);
         FoodRegistry.ITEMS.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
-        ToolRegistry.ITEMS.register(modEventBus);
         OtherRegistry.ITEMS.register(modEventBus);
+        FluidRegistry.FLUID_TYPES.register(modEventBus);
+        FluidRegistry.FLUIDS.register(modEventBus);
+
+        //ArmorRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ToolRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        HammerRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ExcavatorRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        GreatAxeRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        WeaponRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
 
 
         ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);

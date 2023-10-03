@@ -7,7 +7,6 @@
     "mttm:deepslate_tech_ore",
     "mttm:tech_block",
     "mttm:euclase_block",
-    "mttm:nether_ingot_block",
-    "mttm:nether_tech_ore"
+    "mttm:nether_ingot_block"
   ]
 }

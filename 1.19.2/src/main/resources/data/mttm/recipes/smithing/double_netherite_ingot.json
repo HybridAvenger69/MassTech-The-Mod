@@ -7,6 +7,6 @@
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "mttm:double_netherite_ingot"
+    "item": "hybridlib:double_netherite_ingot"
   }
 }
