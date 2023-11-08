@@ -2,9 +2,12 @@ package com.hybridavenger69.mttm.items.tools.base;
 
 import com.google.common.collect.ImmutableSet;
 import com.hybridavenger69.mttm.items.tools.util.HammerUtil;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+
 import net.minecraft.network.chat.Component;
+
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -17,6 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
 
 import javax.annotation.Nullable;
 import java.util.List;

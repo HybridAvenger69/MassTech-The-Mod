@@ -1,9 +1,0 @@
-{
-  "parent": "forge:item/bucket",
-  "loader": "forge:bucket",
-  "textures": {
-    "base": "item/bucket",
-    "fluid": "mttm:item/drip_bucket"
-  },
-  "fluid": "mttm:cryo_fluid"
-}

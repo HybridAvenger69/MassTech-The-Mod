@@ -17,6 +17,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.add(BlockRegistry.EUCLASE_BLOCK.get(),
                 (block) -> createOreDrop(BlockRegistry.EUCLASE_ORE.get(), ItemRegistry.EUCLASE_GEM.get()));
 
+
     }
 
     @Override

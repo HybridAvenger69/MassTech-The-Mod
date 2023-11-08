@@ -1,29 +1,52 @@
 package com.hybridavenger69.mttm.items.tools;
 
-import net.minecraft.world.damagesource.DamageSource;
+import com.google.common.collect.Multimap;
+
+import com.hybridavenger69.mttm.items.tools.util.ToolEnergy;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.item.*;
 
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
 
-public class BattleAxeItem extends AxeItem implements BattleAxeItemInt {
+import org.jetbrains.annotations.Nullable;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 
-    public BattleAxeItem(Tier p_40521_, float p_40522_, float p_40523_, Properties p_40524_) {
-        super(p_40521_, p_40522_, p_40523_, p_40524_);
+import java.util.UUID;
+
+public class BattleAxeItem extends SwordItem {
+
+    // Create a unique UUID for the attribute modifier
+    private static final UUID KNOCKBACK_UUID = UUID.randomUUID();
+
+    public BattleAxeItem(Tier tier, int attackDamage, float attackSpeed, Properties properties) {
+        super(tier, attackDamage, attackSpeed, properties);
     }
 
+    // Override the onLeftClickEntity method to apply the Knockback attribute to the entity being attacked
     @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        // Apply damage to the primary target
-        target.hurt(DamageSource.GENERIC, 8);
-
-        // Apply damage to nearby entities within a radius of 3 blocks
-        double radius = 3.0D;
-        target.level.getEntitiesOfClass(LivingEntity.class,
-                target.getBoundingBox().expandTowards(radius, radius, radius), (livingEntity) -> livingEntity != attacker && livingEntity != target).forEach(entity -> entity.hurt(DamageSource.GENERIC, 6));
-
+    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.knockback(1.0F, attacker.getX() - target.getX(), attacker.getZ() - target.getZ());
         return super.hurtEnemy(stack, target, attacker);
     }
+
+    // Override the getAttributeModifiers method to add the Knockback attribute modifier
+
+
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
+        Multimap<Attribute, AttributeModifier> map = super.getAttributeModifiers(slot, null);
+
+        if (slot == EquipmentSlot.MAINHAND) {
+            map.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(KNOCKBACK_UUID, "Knockback", 20, AttributeModifier.Operation.ADDITION));
+        }
+
+        return map;
+    }
+
 
 
 }

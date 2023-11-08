@@ -1,10 +1,8 @@
 package com.hybridavenger69.mttm.items.registry;
 
+import com.hybridavenger69.hybridlib.HybridIDS;
 import com.hybridavenger69.hybridlib.main.ModTiers;
 import com.hybridavenger69.hybridlib.main.MtGroup;
-import com.hybridavenger69.mttm.MTTM;
-import com.hybridavenger69.mttm.items.tools.BattleAxeItem;
-import com.hybridavenger69.mttm.items.tools.ExcavatorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class WeaponRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, MTTM.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, HybridIDS.MTTM_MODID);
 
 
 
@@ -29,7 +27,7 @@ public class WeaponRegistry {
             () -> new SwordItem(ModTiers.WeaponTiers.ICARUS,10, -2.3f, props()));
 
     public static final RegistryObject<Item> ICARUS2_BATTLEAXE = ITEMS.register("icarus2_battleaxe",
-            () -> new BattleAxeItem(ModTiers.WeaponTiers.ICARUS2, 11, -2.1f, props()));
+            () -> new SwordItem(ModTiers.WeaponTiers.ICARUS2, 11, -2.1f, props()));
 
     //BattleHammers
 

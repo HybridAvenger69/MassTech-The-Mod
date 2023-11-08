@@ -1,5 +1,7 @@
 package com.hybridavenger69.mttm.blocks;
 
+import com.hybridavenger69.hybridlib.HybridIDS;
+import com.hybridavenger69.hybridlib.HybridLib;
 import com.hybridavenger69.hybridlib.main.MtGroup;
 import com.hybridavenger69.mttm.MTTM;
 import com.hybridavenger69.mttm.items.registry.ItemRegistry;
@@ -23,7 +25,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, MTTM.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, HybridIDS.MTTM_MODID);
 
     //Ores
 
@@ -35,6 +37,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> EUCLASE_ORE = register("euclase_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).requiresCorrectToolForDrops()),
             new Item.Properties().tab(MtGroup.MT_GROUP));
+
 
 
     //Nether Ores(WIP)

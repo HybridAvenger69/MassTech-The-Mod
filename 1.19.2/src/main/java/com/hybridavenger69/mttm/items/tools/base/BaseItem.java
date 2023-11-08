@@ -1,5 +1,8 @@
 package com.hybridavenger69.mttm.items.tools.base;
 
+import com.hybridavenger69.mttm.items.tools.util.ToolEnergy;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 
 

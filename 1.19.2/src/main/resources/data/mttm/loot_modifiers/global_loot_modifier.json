@@ -1,8 +1,6 @@
 {
   "replace": false,
   "entries": [
-    "mttm:deepslate_tech_ore",
-    "mttm:tech_ore",
     "mttm:deepslate_euclase_ore",
     "mttm:euclase_ore"
   ]

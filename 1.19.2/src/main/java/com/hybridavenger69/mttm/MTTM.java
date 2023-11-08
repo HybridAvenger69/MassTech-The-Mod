@@ -1,12 +1,17 @@
 package com.hybridavenger69.mttm;
 
 
+import com.hybridavenger69.hybridlib.HybridIDS;
 import com.hybridavenger69.mttm.blocks.BlockRegistry;
 import com.hybridavenger69.mttm.items.registry.*;
 import com.hybridavenger69.mttm.world.feature.ModConfiguredFeatures;
 import com.hybridavenger69.mttm.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 
+
+import net.minecraft.resources.ResourceKey;
+
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,11 +24,11 @@ import org.slf4j.Logger;
 
 
 
+
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(MTTM.MOD_ID)
+@Mod(HybridIDS.MTTM_MODID)
 public class MTTM {
 
-    public static final String MOD_ID = "mttm";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -40,8 +45,6 @@ public class MTTM {
         FoodRegistry.ITEMS.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
         OtherRegistry.ITEMS.register(modEventBus);
-        FluidRegistry.FLUID_TYPES.register(modEventBus);
-        FluidRegistry.FLUIDS.register(modEventBus);
 
         //ArmorRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ToolRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -56,6 +59,9 @@ public class MTTM {
         ModPlacedFeatures.PLACED_FEATURES.register(modEventBus);
 
 
+        ResourceKey<Level> MINING_DIMENSION;
+
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -66,7 +72,7 @@ public class MTTM {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = HybridIDS.MTTM_MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {

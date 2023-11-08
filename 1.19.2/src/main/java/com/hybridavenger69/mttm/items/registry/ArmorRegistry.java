@@ -1,5 +1,7 @@
 package com.hybridavenger69.mttm.items.registry;
 
+import com.hybridavenger69.hybridlib.HybridIDS;
+import com.hybridavenger69.hybridlib.HybridLib;
 import com.hybridavenger69.hybridlib.main.ModTiers;
 import com.hybridavenger69.hybridlib.main.MtGroup;
 import com.hybridavenger69.mttm.MTTM;
@@ -12,7 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 public class ArmorRegistry {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MTTM.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, HybridIDS.MTTM_MODID);
 
     //Tech(Armor)
 

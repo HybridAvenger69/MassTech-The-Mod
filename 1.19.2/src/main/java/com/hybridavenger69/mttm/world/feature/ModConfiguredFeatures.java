@@ -2,6 +2,8 @@ package com.hybridavenger69.mttm.world.feature;
 
 import com.google.common.base.Suppliers;
 
+import com.hybridavenger69.hybridlib.HybridIDS;
+import com.hybridavenger69.hybridlib.HybridLib;
 import com.hybridavenger69.mttm.MTTM;
 import com.hybridavenger69.mttm.blocks.BlockRegistry;
 
@@ -20,7 +22,7 @@ import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
-            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, MTTM.MOD_ID);
+            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, HybridIDS.MTTM_MODID);
 
     //ORE
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_EUCLASE_ORES = Suppliers.memoize(() -> List.of(

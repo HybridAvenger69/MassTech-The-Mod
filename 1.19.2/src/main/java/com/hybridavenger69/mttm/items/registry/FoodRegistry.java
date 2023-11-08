@@ -1,6 +1,8 @@
 package com.hybridavenger69.mttm.items.registry;
 
 
+import com.hybridavenger69.hybridlib.HybridIDS;
+import com.hybridavenger69.hybridlib.HybridLib;
 import com.hybridavenger69.mttm.MTTM;
 import com.hybridavenger69.mttm.items.apples.*;
 import com.hybridavenger69.mttm.items.custom.Foods;
@@ -13,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class FoodRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, MTTM.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, HybridIDS.MTTM_MODID);
 
     public static final RegistryObject<Item> WHEAT_FLOUR = ITEMS.register("wheat_flour",
             () -> new Item(new Item.Properties().tab(MtFood.MT_FOOD)));

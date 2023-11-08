@@ -1,6 +1,8 @@
 package com.hybridavenger69.mttm.items.registry;
 
 
+import com.hybridavenger69.hybridlib.HybridIDS;
+import com.hybridavenger69.hybridlib.HybridLib;
 import com.hybridavenger69.hybridlib.main.MtGroup;
 import com.hybridavenger69.mttm.MTTM;
 import net.minecraft.world.item.Item;
@@ -11,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, MTTM.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, HybridIDS.MTTM_MODID);
 
     //Crafting Components
     public static final RegistryObject<Item> CRAFTING_COMPONENT = ITEMS.register("crafting_component",

@@ -2,9 +2,6 @@ package com.hybridavenger69.mttm.items.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.hybridavenger69.hybridlib.main.ModTiers;
-import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -14,12 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import org.w3c.dom.Text;
 
-import javax.annotation.Nullable;
-import java.util.List;
 import java.util.Map;
 
 public class Icarus extends ArmorItem {  private static final Map<ArmorMaterial, MobEffect> MATERIAL_TO_EFFECT_MAP =
@@ -91,16 +84,5 @@ public class Icarus extends ArmorItem {  private static final Map<ArmorMaterial,
 
         return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
                 leggings.getMaterial() == material && boots.getMaterial() == material;
-    }
-
-    @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
-        if(Screen.hasShiftDown()) {
-            components.add(Component.literal("Gives Regeneration").withStyle(ChatFormatting.AQUA));
-        } else {
-            components.add(Component.literal("Press SHIFT for more info").withStyle(ChatFormatting.YELLOW));
-        }
-
-        super.appendHoverText(stack, level, components, flag);
     }
 }

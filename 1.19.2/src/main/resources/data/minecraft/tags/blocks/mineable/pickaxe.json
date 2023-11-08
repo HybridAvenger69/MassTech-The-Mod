@@ -3,8 +3,6 @@
   "values": [
     "mttm:euclase_ore",
     "mttm:deepslate_euclase_ore",
-    "mttm:tech_ore",
-    "mttm:deepslate_tech_ore",
     "mttm:tech_block",
     "mttm:euclase_block",
     "mttm:nether_ingot_block"

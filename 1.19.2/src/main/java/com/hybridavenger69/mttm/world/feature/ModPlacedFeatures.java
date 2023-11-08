@@ -1,6 +1,8 @@
 package com.hybridavenger69.mttm.world.feature;
 
 
+import com.hybridavenger69.hybridlib.HybridIDS;
+import com.hybridavenger69.hybridlib.HybridLib;
 import com.hybridavenger69.mttm.MTTM;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -13,7 +15,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, MTTM.MOD_ID);
+            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, HybridIDS.MTTM_MODID);
 
 
     public static final RegistryObject<PlacedFeature> EUCLASE_ORE_PLACED = PLACED_FEATURES.register("euclase_ore_placed",
